@@ -24,7 +24,7 @@ class AuthController extends Controller
           }
           else if($user->role=='user' && !$user->is_approved){
             return [
-                'message' => "You are not yet authorized to log in"
+                'message' => "You are not yet authorized to log In"
              ];
           }
         $token = $user->createToken($request->email);
