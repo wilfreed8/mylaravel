@@ -40,6 +40,7 @@ class AuthController extends Controller
             'password' => 'required|confirmed|min:8'
         ]);
         $email = $request->email;
+        $role="user";
         if(Str::contains($email,"admin")) $role="admin";
 
         $user = User::create([...$fields,"role"=>$role,"is_approved"=>true]);
