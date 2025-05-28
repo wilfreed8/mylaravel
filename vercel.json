@@ -1,5 +1,4 @@
 {
-  
     "version": 2,
     "framework": null,
     "functions": {
@@ -25,19 +24,26 @@
             "dest": "/api/index.php"
         }
     ],
-  "env": {
-      "APP_ENV": "production",
-      "APP_DEBUG": "true",
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
 
-      "APP_CONFIG_CACHE": "/tmp/config.php",
-      "APP_EVENTS_CACHE": "/tmp/events.php",
-      "APP_PACKAGES_CACHE": "/tmp/packages.php",
-      "APP_ROUTES_CACHE": "/tmp/routes.php",
-      "APP_SERVICES_CACHE": "/tmp/services.php",
-      "VIEW_COMPILED_PATH": "/tmp",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
 
-      "CACHE_DRIVER": "array",
-      "LOG_CHANNEL": "stderr",
-      "SESSION_DRIVER": "array"
-  }
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "shinkansen.proxy.rlwy.net",
+        "DB_PORT": "36905",
+        "DB_DATABASE": "railway",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "ezowhDYBFPlzucVltEMeZABnNNOFPekv",
+
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "array"
+    }
 }
