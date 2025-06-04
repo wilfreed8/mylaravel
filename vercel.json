@@ -24,10 +24,13 @@
             "dest": "/api/index.php"
         }
     ],
+    "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.php" }
+  ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-
+        "APP_KEY":"base64:pN9tRK7qoGITmhuzeyL2K9mrn9W3LPoE5PIoUYMKGkY=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",

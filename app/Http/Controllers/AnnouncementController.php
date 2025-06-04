@@ -20,9 +20,7 @@ class AnnouncementController extends Controller implements HasMiddleware
     }
     public function index()
     {
-        $announcements = Announcement::where('publish_date', '<=', now())
-        ->orderBy('publish_date', 'desc')
-        ->get();
+        $announcements = announcement::all();
          return $announcements;
     }
 
