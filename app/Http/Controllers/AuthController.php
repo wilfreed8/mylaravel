@@ -17,10 +17,8 @@ class AuthController extends Controller
         $user = User::where('email',$request->email)->first();
           if(!$user || !Hash::check($request->password,$user->password)) {
              return [
-                'errors' =>[
-                    'email' =>["the currents credentials are incorrect"]
-                ] 
-             ];
+                'errors' => "the currents credentials are incorrect"
+            ];
           }
           else if($user->role=='user' && !$user->is_approved){
             return [
@@ -37,7 +35,7 @@ class AuthController extends Controller
         $fields = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email|max:255',
-            'password' => 'required|confirmed|min:8'
+            'password' => 'required'
         ]);
         $email = $request->email;
         $role="user";
